@@ -25,10 +25,6 @@ bot.on('/start', msg => {
     return bot.sendMessage(msg.chat.id, '安安，您好', { reply: msg.message_id });
 });
 
-bot.on('/help', msg => {
-    return bot.sendMessage(msg.chat.id, '安安，我是說明訊息', { reply: msg.message_id });
-});
-
 bot.on('/board', msg => {
     var cmds = msg.text.split(' ');
     var action = cmds.length > 1 && cmds[1].length ? cmds[1].toLowerCase() : null;
@@ -100,10 +96,6 @@ bot.on('/io', msg => {
         else
             return bot.sendMessage(msg.chat.id, '腳位輸入錯誤，使用方法：/io <腳位> <on|off|toggle|get> [指定觸發時間]', { reply: msg.message_id });
     return bot.sendMessage(msg.chat.id, '使用方法：/io <腳位> <on|off|toggle|get> [指定觸發時間]', { reply: msg.message_id });
-});
-
-bot.on('/schedule', msg => {
-    return bot.sendMessage(msg.chat.id, '安安，我是排程', { reply: msg.message_id });
 });
 
 bot.connect();
