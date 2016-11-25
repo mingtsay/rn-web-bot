@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "telebot": "1.0.6",
+        "webduino-js": "0.4.10"
+    }
+}
