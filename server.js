@@ -33,10 +33,6 @@ bot.on('/start', msg => {
     return bot.sendMessage(msg.chat.id, '安安，您好', { reply: msg.message_id });
 });
 
-bot.on('/help', msg => {
-    return bot.sendMessage(msg.chat.id, '安安，我是說明訊息', { reply: msg.message_id });
-});
-
 bot.on('/board', msg => {
     return validateUser(msg, function(msg) {
         var cmds = msg.text.split(' ');
